@@ -1,3 +1,63 @@
 {{ define "main" }}
-<h1>This is a test</h1>
+<section class="panel grid">
+  <div class="text">
+    <h1>This is a standard panel</h1>
+    <p>Donec quis venenatis libero. Maecenas porttitor sagittis nulla, et hendrerit libero eleifend feugiat. Proin diam arcu, sagittis ac tortor id, pulvinar pretium turpis. Nullam et eros id est ornare elementum ac bibendum enim. Nam lacus arcu, iaculis id lectus et, scelerisque vehicula mauris. Vivamus euismod lorem sagittis, tristique lectus et, ultrices ipsum. Curabitur vestibulum lobortis metus eu sollicitudin.</p>
+  </div>
+</section>
+
+<section class="panel grid cutout">
+  <div class="text">
+    <h1>This is a simple cutout panel</h1>
+    <p>Donec quis venenatis libero. Maecenas porttitor sagittis nulla, et hendrerit libero eleifend feugiat. Proin diam arcu, sagittis ac tortor id, pulvinar pretium turpis. Nullam et eros id est ornare elementum ac bibendum enim. Nam lacus arcu, iaculis id lectus et, scelerisque vehicula mauris. Vivamus euismod lorem sagittis, tristique lectus et, ultrices ipsum. Curabitur vestibulum lobortis metus eu sollicitudin.</p>
+  </div>
+</section>
+
+<section>
+  <blockquote><q>This is a longer quote that will go all the way across and span multiple lines.</q> First Last, <i>company title</i></blockquote>
+</section>
+
+<media-panel>
+  <img slot="background" src="https://the-talks.com/wp-content/uploads/2013/01/Christopher-Walken-01-690x360.jpg">
+  <h2>This is a sample media panel</h2>
+  <p>Donec quis venenatis libero. Maecenas porttitor sagittis nulla, et hendrerit libero eleifend feugiat. Proin diam arcu, sagittis ac tortor id, pulvinar pretium turpis. Nullam et eros id est ornare elementum ac bibendum enim. Nam lacus arcu, iaculis id lectus et, scelerisque vehicula mauris. Vivamus euismod lorem sagittis, tristique lectus et, ultrices ipsum. Curabitur vestibulum lobortis metus eu sollicitudin.</p>
+</media-panel>
+
+<section class="panel grid accent">
+  <div class="text">
+    <h1>This is a simple accent panel</h1>
+    <p>Donec quis venenatis libero. Maecenas porttitor sagittis nulla, et hendrerit libero eleifend feugiat. Proin diam arcu, sagittis ac tortor id, pulvinar pretium turpis. Nullam et eros id est ornare elementum ac bibendum enim. Nam lacus arcu, iaculis id lectus et, scelerisque vehicula mauris. Vivamus euismod lorem sagittis, <a href="#">tristique lectus et</a>, ultrices ipsum. Curabitur vestibulum lobortis metus eu sollicitudin.</p>
+  </div>
+</section>
+
+<section class="panel grid wide">
+  <div class="text">
+    <h1>This is a wide panel</h1>
+    <p>Donec quis venenatis libero. Maecenas porttitor sagittis nulla, et hendrerit libero eleifend feugiat. Proin diam arcu, sagittis ac tortor id, pulvinar pretium turpis. Nullam et eros id est ornare elementum ac bibendum enim. Nam lacus arcu, iaculis id lectus et, scelerisque vehicula mauris. Vivamus euismod lorem sagittis, <a href="#">tristique lectus et</a>, ultrices ipsum. Curabitur vestibulum lobortis metus eu sollicitudin.</p>
+  </div>
+
+  <div class="blogs">
+    <h3>This is the column layout</h3>
+    <div class="columns">
+      <div class="package">
+        <figure>
+          <img src="https://the-talks.com/wp-content/uploads/2013/01/Christopher-Walken-01-690x360.jpg">
+        </figure>
+        <h4>Title of the blog post</h4>
+      </div>
+      <div class="package">
+        <figure>
+          <img src="https://the-talks.com/wp-content/uploads/2013/01/Christopher-Walken-01-690x360.jpg">
+        </figure>
+        <h4>Title of the blog post</h4>
+      </div>
+      <div class="package">
+        <figure>
+          <img src="https://the-talks.com/wp-content/uploads/2013/01/Christopher-Walken-01-690x360.jpg">
+        </figure>
+        <h4>Title of the blog post</h4>
+      </div>
+    </div>
+  </div>
+</section>
 {{ end }}

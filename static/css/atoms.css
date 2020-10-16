@@ -1,0 +1,126 @@
+html {
+  /* Typography */
+  font-size: 20px;
+  --serif: "Lora", serif;
+  --sans: "Rosario", sans-serif;
+
+  /* Spacing */
+  --spacing: 30px;
+  --content-width: 728px;
+  --panel-height: 40.25vw;
+  --columns: 1fr minmax(auto, var(--content-width)) 1fr;
+
+  /* Colors */
+  --background-color: #ddd;
+  --text-color: #222;
+  --accent-color: #622A74;
+  --accent-text: white;
+}
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  color: var(--text-color);
+}
+
+/* Typography */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--header-font, var(--serif));
+  font-weight: var(--header-weight, 600);
+  line-height: 1.2em;
+}
+
+h5, h6 {
+  font-family: var(--sans);
+  text-transform: uppercase;
+}
+
+p, li {
+  font-size: 1rem;
+  font-family: var(--font, var(--sans));
+}
+
+a {
+  color: var(--link-color, var(--accent-color));
+  text-decoration: var(--link-decoration, none);
+}
+
+a:hover {
+  text-decoration: var(--link-decoration, underline);
+}
+
+ul, ol {
+  padding-left: 1em;
+}
+
+blockquote {
+  margin-right: 0;
+  margin-left: 0;
+  padding: calc(var(--spacing) * 2);
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+blockquote q {
+  display: block;
+  padding-bottom: calc(var(--spacing) / 2);
+  font: 1.5em/1.4em var(--serif);
+}
+
+q {
+  quotes: "\201C" "\201D";
+}
+
+/* Color */
+
+.cutout {
+  background-color: var(--background-color);
+}
+
+.accent {
+  background-color: var(--accent-color);
+  color: var(--accent-text);
+  --link-color: var(--accent-text);
+  --link-decoration: underline;
+}
+
+/* Media */
+
+figure {
+  position: relative;
+  display: block;
+  margin: 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+figcaption {
+  font: 0.75rem/1.2em var(--sans);
+}
+
+/* General Layout */
+
+.grid {
+  display: grid;
+  grid-template-columns: var(--columns);
+  grid-column-gap: var(--spacing);
+}
+
+.grid > * {
+  margin: 0;
+  grid-column: var(--column, 2); 
+}
+
+.panel {
+  grid-column: 1/-1;
+  align-content: center;
+  min-height: var(--panel-height);
+}
+
+.wide {
+  --content-width: 920px;
+}

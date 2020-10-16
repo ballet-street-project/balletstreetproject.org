@@ -1,0 +1,23 @@
+/**
+ * Package groups elements together
+ */
+
+.package {
+  display: grid;
+  grid-row-gap: calc(var(--spacing) / 2);
+}
+
+.package > * {
+  margin: 0;
+}
+
+/**
+ * Column layout (used with grid)
+ */
+
+.columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-gap: var(--spacing);
+  --header-font: var(--sans);
+}
