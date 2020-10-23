@@ -3,24 +3,32 @@ html {
   font-size: 20px;
   --serif: "Lora", serif;
   --sans: "Rosario", sans-serif;
+  --dance: "Dancing Script", cursive;
 
   /* Spacing */
   --spacing: 30px;
   --content-width: 728px;
   --panel-height: 40.25vw;
-  --columns: 1fr minmax(auto, var(--content-width)) 1fr;
 
   /* Colors */
   --background-color: #ddd;
   --text-color: #222;
   --accent-color: #622A74;
   --accent-text: white;
+
+  /* Parallax setup */
+  height: 100%;
+  overflow: hidden;
 }
 
 body {
   margin: 0;
   font-family: var(--sans);
   color: var(--text-color);
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: scroll;
+  perspective: 1px;
 }
 
 /* Typography */
@@ -29,6 +37,22 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--header-font, var(--serif));
   font-weight: var(--header-weight, 600);
   line-height: 1.2em;
+}
+
+h1, .h1 {
+  font-size: var(--header-size, 1.8em);
+}
+
+h2, .h2 {
+  font-size: var(--header-size, 1.4em);
+}
+
+h3, .h3 {
+  font-size: var(--header-size, 1.2em);
+}
+
+h4, .h4 {
+  font-size: var(--header-size, 1em);
 }
 
 h5, h6 {
@@ -106,7 +130,7 @@ figcaption {
 
 .grid {
   display: grid;
-  grid-template-columns: var(--columns);
+  grid-template-columns: 1fr minmax(auto, var(--content-width)) 1fr;
   grid-column-gap: var(--spacing);
 }
 
@@ -117,10 +141,14 @@ figcaption {
 
 .panel {
   grid-column: 1/-1;
-  align-content: center;
-  min-height: var(--panel-height);
+  padding: calc(var(--spacing) * 2) 0;
+  position: relative;
 }
 
 .wide {
   --content-width: 920px;
+}
+
+.align {
+  max-width: var(--content-width);
 }
