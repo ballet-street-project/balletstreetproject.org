@@ -1,5 +1,7 @@
 baseURL = "https://pilgreen.github.io/balletinthestreets.org"
-languageCode = "en-us"
 title = "Ballet Street Project"
+
+languageCode = "en-us"
+relativeURLs = true
 
 disableKinds = ["taxonomy", "term"]
