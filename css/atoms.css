@@ -15,20 +15,12 @@ html {
   --text-color: #222;
   --accent-color: #622A74;
   --accent-text: white;
-
-  /* Parallax setup */
-  height: 100%;
-  overflow: hidden;
 }
 
 body {
   margin: 0;
   font-family: var(--sans);
   color: var(--text-color);
-  height: 100%;
-  overflow-x: hidden;
-  overflow-y: scroll;
-  perspective: 1px;
 }
 
 /* Typography */
