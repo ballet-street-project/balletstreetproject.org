@@ -28,6 +28,7 @@ body {
 h1, h2, h3, h4, h5, h6 {
   font-family: var(--header-font, var(--serif));
   font-weight: var(--header-weight, 600);
+  color: var(--text-color);
   line-height: 1.2em;
 }
 
@@ -55,6 +56,7 @@ h5, h6 {
 p, li {
   font-size: 1rem;
   font-family: var(--font, var(--sans));
+  color: var(--text-color);
 }
 
 a {
@@ -96,8 +98,15 @@ q {
 
 .accent {
   background-color: var(--accent-color);
-  color: var(--accent-text);
+  mix-blend-mode: var(--mbm, normal);
+  --text-color: var(--accent-text);
   --link-color: var(--accent-text);
+  --link-decoration: underline;
+}
+
+.white {
+  --text-color: white;
+  --link-color: white;
   --link-decoration: underline;
 }
 

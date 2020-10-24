@@ -5,6 +5,7 @@
 .package {
   display: grid;
   grid-row-gap: calc(var(--spacing) / 2);
+  padding: var(--spacing);
 }
 
 .package > * {
