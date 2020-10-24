@@ -110,6 +110,7 @@ q {
 }
 
 .hard-light {
+  isolation: isolate;
   mix-blend-mode: hard-light;
 }
 
