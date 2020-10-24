@@ -153,3 +153,7 @@ figcaption {
 .align {
   max-width: var(--content-width);
 }
+
+.pad {
+  padding: var(--spacing);
+}

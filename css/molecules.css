@@ -5,7 +5,6 @@
 .package {
   display: grid;
   grid-row-gap: calc(var(--spacing) / 2);
-  padding: var(--spacing);
 }
 
 .package > * {
@@ -33,13 +32,12 @@
   top: 0;
   left: 0;
   width: 100%;
-  color: white;
   box-sizing: border-box;
   padding: calc(var(--spacing) / 2) var(--spacing);
   display: flex;
   align-items: center;
   --header-font: var(--dance);
-  color: white;
+  --text-color: white;
   mix-blend-mode: exclusion;
   z-index: 2;
 }
