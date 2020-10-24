@@ -29,8 +29,8 @@ class ParallaxPanel extends HTMLElement {
         display: block;
         position: absolute;
         width: 100%;
-        height: calc(100% + 200px);
-        top: -100px;
+        height: 100%;
+        bottom: 0;
       }
 
       .background::slotted(*) {
@@ -73,7 +73,7 @@ class ParallaxPanel extends HTMLElement {
 
   start() {
     const bbox = this.getBoundingClientRect();
-    const yPos = (bbox.y * this.speed) / 100;
+    const yPos = -(bbox.y * this.speed) / 100;
     this._background.style.transform = `translate3d(0, ${yPos}px, 0)`;
     this._af = window.requestAnimationFrame(this.start.bind(this));
   }
