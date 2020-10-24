@@ -16,12 +16,21 @@ class ParallaxPanel extends HTMLElement {
         grid-template-columns: minmax(auto, var(--content-width)) 1fr;
         align-content: end;
         background-color: var(--background-color);
+        overflow: hidden;
       }
 
       @media(orientation: portrait) {
         :host {
           min-height: 150vw;
         }
+      }
+
+      .background {
+        display: block;
+        position: absolute;
+        width: 100%;
+        height: calc(100% + 200px);
+        top: -100px;
       }
 
       .background::slotted(*) {
@@ -31,25 +40,16 @@ class ParallaxPanel extends HTMLElement {
         object-fit: cover;
       }
 
-      .screen {
-        position: relative;
-        padding: var(--spacing);
-        color: var(--accent-text);
-        background-color: var(--accent-color);
-        mix-blend-mode: hard-light;
-      }
-
       .content {
         display: block;
+        position: relative;
         max-width: var(--content-width);
-      }
+     }
     </style>
 
     <slot class="background" name="background"></slot>
 
-    <div class="screen">
-      <slot class="content"></slot>
-    </div>
+    <slot class="content"></slot>
     `;
     return t;
   }
@@ -58,8 +58,46 @@ class ParallaxPanel extends HTMLElement {
     super();
     this.attachShadow({ mode: "open" });
     this.shadowRoot.appendChild(this.template.content.cloneNode(true));
+
+    // Convenience
+    this._background = this.shadowRoot.querySelector(".background");
+  }
+
+  connectedCallback() {
+    observer.observe(this);
+  }
+
+  disconnectedCallback() {
+    observer.unobserve(this);
+  }
+
+  start() {
+    const bbox = this.getBoundingClientRect();
+    const yPos = (bbox.y * this.speed) / 100;
+    this._background.style.transform = `translate3d(0, ${yPos}px, 0)`;
+    this._af = window.requestAnimationFrame(this.start.bind(this));
+  }
+
+  stop() {
+    window.cancelAnimationFrame(this._af);
+  }
+
+  get speed() {
+    return this.dataset.speed || 10;
   }
 }
+
+/**
+ * Intersection Observer
+ */
+
+const handleIntersect = (entries) => {
+  entries.forEach(entry => {
+    entry.isIntersecting ? entry.target.start() : entry.target.stop();
+  });
+}
+
+const observer = new IntersectionObserver(handleIntersect);
 
 // Register the element
 customElements.define("parallax-panel", ParallaxPanel);
