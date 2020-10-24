@@ -21,7 +21,7 @@ class ParallaxPanel extends HTMLElement {
 
       @media(orientation: portrait) {
         :host {
-          min-height: 150vw;
+          min-height: 180vw;
         }
       }
 
