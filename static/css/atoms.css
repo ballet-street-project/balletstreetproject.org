@@ -109,8 +109,8 @@ q {
   --link-decoration: underline;
 }
 
-.hard-light {
-  mix-blend-mode: hard-light;
+.accent.screen {
+  background-color: rgba(98, 42, 116, 0.7);
 }
 
 /* Media */
