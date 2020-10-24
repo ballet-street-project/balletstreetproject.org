@@ -98,7 +98,6 @@ q {
 
 .accent {
   background-color: var(--accent-color);
-  mix-blend-mode: var(--mbm, normal);
   --text-color: var(--accent-text);
   --link-color: var(--accent-text);
   --link-decoration: underline;
@@ -108,6 +107,10 @@ q {
   --text-color: white;
   --link-color: white;
   --link-decoration: underline;
+}
+
+.hard-light {
+  mix-blend-mode: hard-light;
 }
 
 /* Media */
