@@ -5,6 +5,7 @@
 .package {
   display: grid;
   grid-row-gap: calc(var(--spacing) / 2);
+  align-content: start;
 }
 
 .package > * {
@@ -27,7 +28,6 @@
  */
 
 .flag {
-  grid-column: 1/-1;
   position: absolute;
   top: 0;
   left: 0;
@@ -36,7 +36,6 @@
   padding: calc(var(--spacing) / 2) var(--spacing);
   display: flex;
   align-items: center;
-  --header-font: var(--dance);
   --text-color: white;
   mix-blend-mode: exclusion;
   z-index: 2;
@@ -44,4 +43,22 @@
 
 .flag > * {
   margin: 0;
+}
+
+.logo {
+  --header-font: var(--subway);
+  font-size: calc(100vw / 18);
+  font-weight: normal;
+}
+
+/**
+ * Custom panel settings
+ */
+
+.intro-video {
+  min-height: 50vw;
+}
+
+.mission-statement {
+  text-align: center;
 }

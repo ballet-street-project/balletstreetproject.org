@@ -1,9 +1,14 @@
+@font-face {
+  font-family: "Subway";
+  src: url("../fonts/subway.woff2") format("woff2");
+}
+
 html {
   /* Typography */
   font-size: 20px;
   --serif: "Lora", serif;
   --sans: "Rosario", sans-serif;
-  --dance: "Dancing Script", cursive;
+  --subway: "Subway", serif;
 
   /* Spacing */
   --spacing: 30px;
@@ -13,7 +18,8 @@ html {
   /* Colors */
   --background-color: #ddd;
   --text-color: #222;
-  --accent-color: #622A74;
+  --accent-rgb: 51, 51, 51;
+  --accent-color: rgb(var(--accent-rgb));
   --accent-text: white;
 }
 
@@ -75,7 +81,6 @@ ul, ol {
 blockquote {
   margin-right: 0;
   margin-left: 0;
-  padding: calc(var(--spacing) * 2);
   font-size: 0.875rem;
   text-align: center;
 }
@@ -88,6 +93,11 @@ blockquote q {
 
 q {
   quotes: "\201C" "\201D";
+}
+
+.small {
+  font-size: 0.875rem;
+  font-family: var(--sans);
 }
 
 /* Color */
@@ -103,14 +113,14 @@ q {
   --link-decoration: underline;
 }
 
+.accent.screen {
+  background-color: rgba(var(--accent-rgb), 0.7)
+}
+
 .white {
   --text-color: white;
   --link-color: white;
   --link-decoration: underline;
-}
-
-.accent.screen {
-  background-color: rgba(98, 42, 116, 0.7);
 }
 
 /* Media */
@@ -143,10 +153,8 @@ figcaption {
   grid-column: var(--column, 2); 
 }
 
-.panel {
+.bleed {
   grid-column: 1/-1;
-  padding: calc(var(--spacing) * 2) 0;
-  position: relative;
 }
 
 .wide {
@@ -160,3 +168,19 @@ figcaption {
 .pad {
   padding: var(--spacing);
 }
+
+/* Stackable panels with some breathing room */
+
+.panel {
+  padding: calc(var(--spacing) * 2) 0;
+  position: relative;
+}
+
+.panel > :first-child {
+  margin-top: 0;
+}
+
+.panel > :last-child {
+  margin-bottom: 0;
+}
+
