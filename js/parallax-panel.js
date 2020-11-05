@@ -11,7 +11,7 @@ class ParallaxPanel extends HTMLElement {
       :host {
         --column: 1/-1;
         position: relative;
-        min-height: 75vw;
+        min-height: var(--landscape-height, 75vw);
         display: grid;
         grid-template-columns: minmax(auto, var(--content-width)) 1fr;
         align-content: end;
@@ -21,7 +21,7 @@ class ParallaxPanel extends HTMLElement {
 
       @media(orientation: portrait) {
         :host {
-          min-height: 180vw;
+          min-height: var(--portrait-height, 180vw);
         }
       }
 
