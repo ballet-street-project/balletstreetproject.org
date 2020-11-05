@@ -56,7 +56,8 @@
  */
 
 .intro-video {
-  min-height: 50vw;
+  --landscape-height: 50vw;
+  --portrait-height: 100vw;
 }
 
 .mission-statement {
