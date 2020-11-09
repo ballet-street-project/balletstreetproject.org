@@ -6,7 +6,7 @@
 html {
   /* Typography */
   font-size: 20px;
-  --serif: "Lora", serif;
+  --header-font: "Raleway", sans-serif;
   --sans: "Rosario", sans-serif;
   --subway: "Subway", serif;
 
@@ -32,8 +32,8 @@ body {
 /* Typography */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--header-font, var(--serif));
-  font-weight: var(--header-weight, 600);
+  font-family: var(--header-font, var(--header-font));
+  font-weight: 400;
   color: var(--text-color);
   line-height: 1.2em;
 }
@@ -60,8 +60,7 @@ h5, h6 {
 }
 
 p, li {
-  font-size: 1rem;
-  font-family: var(--font, var(--sans));
+  font: 400 1rem/1.4em var(--font, var(--sans));
   color: var(--text-color);
 }
 
@@ -88,7 +87,7 @@ blockquote {
 blockquote q {
   display: block;
   padding-bottom: calc(var(--spacing) / 2);
-  font: 1.5em/1.4em var(--serif);
+  font: 1.5em/1.4em var(--header-font);
 }
 
 q {
