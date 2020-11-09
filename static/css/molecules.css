@@ -36,8 +36,7 @@
   padding: calc(var(--spacing) / 2) var(--spacing);
   display: flex;
   align-items: center;
-  --text-color: rebeccapurple;
-  mix-blend-mode: color-burn;
+  mix-blend-mode: difference;
   z-index: 2;
 }
 
@@ -46,7 +45,8 @@
 }
 
 .logo {
-  --header-font: var(--subway);
+  --header-font: var(--logo-font);
+  --text-color: aliceblue;
   font-size: calc(100vw / 15);
   font-weight: normal;
 }

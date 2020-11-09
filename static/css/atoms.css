@@ -1,14 +1,14 @@
 @font-face {
-  font-family: "Subway";
-  src: url("../fonts/subway.woff2") format("woff2");
+  font-family: "Marker";
+  src: url("../fonts/freshmarker.woff2") format("woff2");
 }
 
 html {
   /* Typography */
   font-size: 20px;
   --header-font: "Raleway", sans-serif;
-  --sans: "Rosario", sans-serif;
-  --subway: "Subway", serif;
+  --sans: "Open Sans", sans-serif;
+  --logo-font: "Marker", serif;
 
   /* Spacing */
   --spacing: 30px;
@@ -21,6 +21,7 @@ html {
   --accent-rgb: 51, 51, 51;
   --accent-color: rgb(var(--accent-rgb));
   --accent-text: white;
+  --link-color: rebeccapurple;
 }
 
 body {
@@ -32,10 +33,10 @@ body {
 /* Typography */
 
 h1, h2, h3, h4, h5, h6 {
-  font-family: var(--header-font, var(--header-font));
+  font-family: var(--header-font);
   font-weight: 400;
-  color: var(--text-color);
   line-height: 1.2em;
+  color: var(--text-color);
 }
 
 h1, .h1 {
@@ -52,10 +53,12 @@ h3, .h3 {
 
 h4, .h4 {
   font-size: var(--header-size, 1em);
+  font-weight: 600;
 }
 
 h5, h6 {
   font-family: var(--sans);
+  font-weight: 600;
   text-transform: uppercase;
 }
 
@@ -65,7 +68,7 @@ p, li {
 }
 
 a {
-  color: var(--link-color, var(--accent-color));
+  color: var(--link-color);
   text-decoration: var(--link-decoration, none);
 }
 
