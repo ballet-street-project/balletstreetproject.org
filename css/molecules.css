@@ -18,7 +18,7 @@
 
 .columns {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  grid-template-columns: repeat(auto-fit, 300px);
   grid-gap: var(--spacing);
   --header-font: var(--sans);
 }
@@ -58,7 +58,6 @@
 }
 
 
-
 /**
  * Custom panel settings
  */
@@ -70,4 +69,38 @@
 
 .mission-statement {
   text-align: center;
+}
+
+/**
+ * Bios
+ */
+
+.bios {
+  grid-row-gap: var(--spacing);
+  --content-width: 920px;
+}
+
+.bio {
+  display: grid;
+  grid-gap: var(--spacing);
+}
+
+@media(min-width: 600px) {
+  .bio {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+.bio figure {
+  position: relative;
+  padding-top: 100%;
+}
+
+.bio img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
