@@ -34,9 +34,8 @@
   width: 100%;
   box-sizing: border-box;
   padding: calc(var(--spacing) / 2) var(--spacing);
-  display: flex;
-  align-items: center;
-  mix-blend-mode: difference;
+  background: linear-gradient(rgba(255,255,255,0.6), transparent);
+  mix-blend-mode: hard-light;
   z-index: 2;
 }
 
@@ -46,17 +45,10 @@
 
 .logo {
   --header-font: var(--logo-font);
-  --text-color: aliceblue;
-  font-size: calc(100vw / 15);
-  font-weight: normal;
+  --text-color: black;
+  font-size: calc(100vw / 10);
+  text-align: center;
 }
-
-@media(min-width: 700px) {
-  .logo {
-    font-size: 48px;
-  }
-}
-
 
 /**
  * Custom panel settings
@@ -75,14 +67,10 @@
  * Bios
  */
 
-.bios {
-  grid-row-gap: var(--spacing);
-  --content-width: 920px;
-}
-
 .bio {
   display: grid;
   grid-gap: var(--spacing);
+  margin: var(--spacing) 0;
 }
 
 @media(min-width: 600px) {
