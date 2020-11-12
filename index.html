@@ -13,12 +13,22 @@
 
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;1,400&family=Raleway&family=Ibarra+Real+Nova:ital,wght@1,525&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="./css/atoms.css">
-    <link rel="stylesheet" href="./css/molecules.css">
+    <link rel="stylesheet" href="/css/atoms.css">
+    <link rel="stylesheet" href="/css/molecules.css">
 
-    <script type="module" src="./js/parallax-panel.js"></script>
-    <script type="module" src="./js/vimeo-player.js"></script>
-    <script type="module" src="./js/youtube-player.js"></script>
+    <script type="module" src="/js/parallax-panel.js"></script>
+    <script type="module" src="/js/vimeo-player.js"></script>
+    <script type="module" src="/js/youtube-player.js"></script>
+
+    
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL2ERS3DK1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-EL2ERS3DK1');
+    </script>
   </head>
 
   <body class="grid">
@@ -29,7 +39,7 @@
     
 <parallax-panel class="intro-video">
   <video slot="background" autoplay muted loop playsinline>
-    <source src="./videos/union-station.mp4" type="video/mp4">
+    <source src="/videos/union-station.mp4" type="video/mp4">
   </video>
 </parallax-panel>
 
@@ -69,7 +79,7 @@
     <h2 class="h1">Who we are</h2>
     <div class="bio">
       <figure>
-        <img src="./images/tempe-thumb.jpg" loading="lazy">
+        <img src="/images/tempe-thumb.jpg" loading="lazy">
       </figure>
       <div class="package">
         <h5>Tempe Ostergren Elsberry</h5>
@@ -78,7 +88,7 @@
     </div>
     <div class="bio">
       <figure>
-        <img src="./images/ron-thumb.jpg" loading="lazy">
+        <img src="/images/ron-thumb.jpg" loading="lazy">
       </figure>
       <div class="package">
         <h5>Ron Berg</h5>
