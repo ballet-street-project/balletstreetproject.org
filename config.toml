@@ -1,7 +1,5 @@
-baseURL = "https://pilgreen.github.io/balletinthestreets.org"
+baseURL = "https://balletstreetproject.org"
 title = "Ballet Street Project"
-
 languageCode = "en-us"
-relativeURLs = true
 
 disableKinds = ["taxonomy", "term"]
