@@ -1,14 +1,9 @@
-@font-face {
-  font-family: "Marker";
-  src: url("../fonts/freshmarker.woff2") format("woff2");
-}
-
 html {
   /* Typography */
   font-size: 20px;
   --header-font: "Raleway", sans-serif;
   --sans: "Open Sans", sans-serif;
-  --logo-font: "Marker", serif;
+  --logo-font: "Ibarra Real Nova", serif;
 
   /* Spacing */
   --spacing: 30px;
@@ -83,14 +78,13 @@ ul, ol {
 blockquote {
   margin-right: 0;
   margin-left: 0;
-  font-size: 0.875rem;
-  text-align: center;
 }
 
 blockquote q {
   display: block;
   padding-bottom: calc(var(--spacing) / 2);
   font: 1.5em/1.4em var(--header-font);
+  text-align: center;
 }
 
 q {
@@ -161,10 +155,6 @@ figcaption {
 
 .wide {
   --content-width: 920px;
-}
-
-.align {
-  max-width: var(--content-width);
 }
 
 .pad {
