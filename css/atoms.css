@@ -128,11 +128,10 @@ figure {
 }
 
 img {
-  display: block;
-  width: 100%;
+  max-width: 100%;
 }
 
-figcaption {
+figcaption, .figcaption {
   font: 0.75rem/1.2em var(--sans);
 }
 

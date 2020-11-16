@@ -35,7 +35,6 @@
   box-sizing: border-box;
   padding: calc(var(--spacing) / 2) var(--spacing);
   background: linear-gradient(rgba(255,255,255,0.6), transparent);
-  mix-blend-mode: hard-light;
   z-index: 2;
 }
 
@@ -54,7 +53,7 @@
  * Custom panel settings
  */
 
-.intro-video {
+.hero {
   --landscape-height: 50vw;
   --portrait-height: 100vw;
 }
