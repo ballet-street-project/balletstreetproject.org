@@ -11,11 +11,11 @@ class ParallaxPanel extends HTMLElement {
       :host {
         --column: 1/-1;
         position: relative;
-        min-height: var(--landscape-height, 75vw);
         display: grid;
         grid-template-columns: minmax(auto, var(--content-width)) 1fr;
         align-content: end;
         background-color: var(--background-color);
+        min-height: var(--landscape-height, 75vw);
         overflow: hidden;
       }
 
@@ -48,7 +48,6 @@ class ParallaxPanel extends HTMLElement {
     </style>
 
     <slot class="background" name="background"></slot>
-
     <slot class="content"></slot>
     `;
     return t;
@@ -65,6 +64,13 @@ class ParallaxPanel extends HTMLElement {
 
   connectedCallback() {
     observer.observe(this);
+
+    // Shuffle possible backgrounds if set
+    if(this.dataset.shuffle == "background") {
+      const backgrounds = this.querySelectorAll("[slot=background][hidden]");
+      const random = Math.floor(Math.random() * backgrounds.length);
+      backgrounds.item(random).hidden = false;
+    }
   }
 
   disconnectedCallback() {
