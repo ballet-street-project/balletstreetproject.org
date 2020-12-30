@@ -82,12 +82,12 @@ blockquote {
 
 blockquote q {
   display: block;
-  padding-bottom: calc(var(--spacing) / 2);
   font: 1.5em/1.4em var(--header-font);
   text-align: center;
 }
 
 q {
+  color: var(--text-color);
   quotes: "\201C" "\201D";
 }
 
@@ -174,4 +174,3 @@ figcaption, .figcaption {
 .panel > :last-child {
   margin-bottom: 0;
 }
-
