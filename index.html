@@ -22,6 +22,7 @@
     <script type="module" src="/js/parallax-panel.js"></script>
     <script type="module" src="/js/vimeo-player.js"></script>
     <script type="module" src="/js/youtube-player.js"></script>
+    <script type="module" src="/js/animate-in.js"></script>
 
     
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-EL2ERS3DK1"></script>
@@ -62,21 +63,23 @@
   <p>The final composition was arranged and edited by the talent at Bic Media.</p>
 </section>
 
-<section class="panel">
-  <blockquote>
-    <q>This is wonderful, seeing the beauty of dance among the beauty of the city.</q>
-  </blockquote>
-</section>
-<section class="panel">
-  <blockquote>
-    <q>Like a breath of fresh air! Thank you!!!</q>
-  </blockquote>
-</section>
-<section class="panel">
-  <blockquote>
-    <q>I miss the performaing arts. That's what my soul needed. Thank you.</q>
-  </blockquote>
-</section>
+<div class="bleed accent testimonials panel">
+  <animate-in from="right">
+    <blockquote>
+      <q>This is wonderful, seeing the beauty of dance among the beauty of the city.</q>
+    </blockquote>
+  </animate-in>
+  <animate-in from="left">
+    <blockquote>
+      <q>Like a breath of fresh air! Thank you!!!</q>
+    </blockquote>
+  </animate-in>
+  <animate-in from="right">
+    <blockquote>
+      <q>I miss the performaing arts. That's what my soul needed. Thank you.</q>
+    </blockquote>
+  </animate-in>
+</div>
 
 <div class="bleed grid wide">
   <section class="panel">
@@ -102,5 +105,9 @@
   </section>
 </div>
 
+
+    <footer class="bleed accent">
+      <a href="mailto:tempetto@yahoo.com" target="_blank">Contact us</a>
+    </footer>
   </body>
 </html>

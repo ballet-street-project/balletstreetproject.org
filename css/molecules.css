@@ -92,3 +92,39 @@
   object-fit: cover;
   object-position: 50% 40%;
 }
+
+/**
+ * Testimonials
+ */
+
+.testimonials animate-in {
+  display: grid;
+  padding: var(--spacing);
+  justify-content: center;
+}
+
+.testimonials blockquote {
+  max-width: var(--content-width);
+  margin: 0;
+}
+
+.testimonials :nth-child(even) blockquote {
+  justify-self: end;
+}
+
+/**
+ * Footer
+ */
+
+footer {
+  padding: 0 calc(var(--spacing) / 2);
+  display: flex;
+  justify-content: center;
+}
+
+footer a {
+  font-weight: bold;
+  font-size: 0.875rem;
+  padding: calc(var(--spacing) / 2);
+  --link-decoration: none;
+}
