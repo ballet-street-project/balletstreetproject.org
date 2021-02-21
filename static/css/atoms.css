@@ -7,7 +7,7 @@ html {
 
   /* Spacing */
   --spacing: 30px;
-  --content-width: 728px;
+  --content-width: 920px;
   --panel-height: 40.25vw;
 
   /* Colors */
@@ -150,10 +150,6 @@ figcaption, .figcaption {
 
 .bleed {
   grid-column: 1/-1;
-}
-
-.wide {
-  --content-width: 920px;
 }
 
 .pad {
